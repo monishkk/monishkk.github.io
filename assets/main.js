@@ -10,26 +10,27 @@
   /* ---- theme ------------------------------------------------ */
   var toggle = document.getElementById('themeToggle');
 
+  // Dark is the default; the light attribute is the opt-in override.
   function apply(theme) {
-    if (theme === 'dark') {
-      root.setAttribute('data-theme', 'dark');
+    if (theme === 'light') {
+      root.setAttribute('data-theme', 'light');
     } else {
       root.removeAttribute('data-theme');
     }
     if (toggle) {
-      toggle.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
+      toggle.setAttribute('aria-pressed', theme === 'light' ? 'false' : 'true');
       toggle.querySelector('.rail__themetext').textContent =
-        theme === 'dark' ? 'Paper' : 'Invert';
+        theme === 'light' ? 'Invert' : 'Paper';
     }
   }
 
   var stored = null;
   try { stored = localStorage.getItem(STORE); } catch (e) { /* private mode */ }
-  apply(stored === 'dark' ? 'dark' : 'light');
+  apply(stored === 'light' ? 'light' : 'dark');
 
   if (toggle) {
     toggle.addEventListener('click', function () {
-      var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      var next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
       apply(next);
       try { localStorage.setItem(STORE, next); } catch (e) { /* ignore */ }
     });

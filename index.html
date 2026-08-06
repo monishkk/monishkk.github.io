@@ -6,7 +6,15 @@
 <title>Monish Krishnakumar — Aerospace Engineering</title>
 <meta name="description" content="Monish Krishnakumar — B.S. Aerospace Engineering at the University of Washington. Manufacturing engineer on UW Design Build Fly; quantitative research in Python.">
 <meta name="author" content="Monish Krishnakumar">
-<meta name="color-scheme" content="light dark">
+<meta name="color-scheme" content="dark light">
+<script>
+  /* Applied before first paint so a stored "paper" choice never flashes dark. */
+  try {
+    if (localStorage.getItem('mk-theme') === 'light') {
+      document.documentElement.setAttribute('data-theme', 'light');
+    }
+  } catch (e) {}
+</script>
 <meta property="og:type" content="website">
 <meta property="og:title" content="Monish Krishnakumar — Aerospace Engineering">
 <meta property="og:description" content="Composite structures and flight hardware for competition aircraft. Reproducible quantitative research in Python.">

@@ -6,10 +6,11 @@ Personal portfolio — Monish Krishnakumar. Aerospace Engineering, University of
 
 ## Design
 
-Technical-drawing theme on beige drafting paper: graph-paper grid, drafting rules and
-registration marks, sheet-indexed sections, balloon callouts, and a title block in the footer.
-A single accent (drafting red) is used for emphasis. The side rail's **Invert** control flips
-the page to a dark sepia negative; the choice is stored in `localStorage`.
+Technical-drawing theme: graph-paper grid, drafting rules and registration marks,
+sheet-indexed sections, balloon callouts, and a title block in the footer. A single warm
+accent is used for emphasis. The default print is a **dark sepia negative**; the side rail's
+**Paper** control flips it to the beige drafting-paper version. The choice is stored in
+`localStorage` and re-applied in `<head>` before first paint so it never flashes.
 
 ## Stack
 

@@ -3,29 +3,8 @@
    Theme: drafting blueprint, beige / sepia paper
    ========================================================= */
 
+/* Dark sepia negative is the default print; paper is the opt-in inversion. */
 :root {
-  --paper:      #efe6d4;
-  --paper-2:    #e8ddc7;
-  --paper-3:    #e1d5bb;
-  --ink:        #2e2822;
-  --ink-2:      #58503f;
-  --ink-3:      #8b7f68;
-  --line:       #c0af90;
-  --line-soft:  #d5c8ad;
-  --accent:     #a3492d;
-
-  --grid-minor: rgba(120, 104, 74, .085);
-  --grid-major: rgba(120, 104, 74, .16);
-  --grid-size:  22px;
-
-  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Consolas, monospace;
-  --sans: "IBM Plex Sans", ui-sans-serif, system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
-
-  --rail-w: 190px;
-  --pad: clamp(20px, 4vw, 56px);
-}
-
-html[data-theme="dark"] {
   --paper:      #211c16;
   --paper-2:    #282219;
   --paper-3:    #2f281e;
@@ -38,6 +17,32 @@ html[data-theme="dark"] {
 
   --grid-minor: rgba(226, 208, 172, .05);
   --grid-major: rgba(226, 208, 172, .10);
+  --grid-size:  22px;
+
+  --plate-filter: sepia(.30) saturate(.85) contrast(1.02) brightness(.86);
+
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Consolas, monospace;
+  --sans: "IBM Plex Sans", ui-sans-serif, system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
+
+  --rail-w: 190px;
+  --pad: clamp(20px, 4vw, 56px);
+}
+
+html[data-theme="light"] {
+  --paper:      #efe6d4;
+  --paper-2:    #e8ddc7;
+  --paper-3:    #e1d5bb;
+  --ink:        #2e2822;
+  --ink-2:      #58503f;
+  --ink-3:      #8b7f68;
+  --line:       #c0af90;
+  --line-soft:  #d5c8ad;
+  --accent:     #a3492d;
+
+  --grid-minor: rgba(120, 104, 74, .085);
+  --grid-major: rgba(120, 104, 74, .16);
+
+  --plate-filter: sepia(.24) saturate(.90) contrast(1.01) brightness(1.01);
 }
 
 *, *::before, *::after { box-sizing: border-box; }
