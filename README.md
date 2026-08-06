@@ -21,6 +21,7 @@ index.html          all content
 assets/style.css    theme, layout, print styles
 assets/main.js      scroll-spy, reveal-on-scroll, theme toggle
 assets/favicon.svg
+assets/img/         DBF shop plates, cropped 2:3 and served at native width
 ```
 
 Type: IBM Plex Sans + IBM Plex Mono (Google Fonts).

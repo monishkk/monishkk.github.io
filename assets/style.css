@@ -434,6 +434,46 @@ a { color: inherit; }
   color: var(--ink-2);
 }
 
+/* --- photo plates --- */
+.plates {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 18px;
+  margin-top: 4px;
+}
+@media (min-width: 860px) { .plates { grid-template-columns: repeat(3, 1fr); } }
+
+.plate { margin: 0; min-width: 0; }
+
+.plate img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  background: var(--paper-2);
+  /* Graded into the sheet's palette; true colour on hover/focus. */
+  filter: var(--plate-filter);
+  transition: filter .45s ease, border-color .25s ease;
+}
+.plate:hover img, .plate:focus-within img {
+  filter: none;
+  border-color: var(--ink-3);
+}
+@media (prefers-reduced-motion: reduce) { .plate img { transition: none; } }
+
+.plate figcaption {
+  margin-top: 9px;
+  padding-top: 8px;
+  border-top: 1px solid var(--line-soft);
+  font: 400 9.5px/1.5 var(--mono);
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.plate__no { color: var(--accent); margin-right: 6px; }
+
 /* --- spec table --- */
 .spec {
   width: 100%;
