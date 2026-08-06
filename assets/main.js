@@ -48,7 +48,11 @@
      leave the page invisible. */
   blocks.forEach(function (b) { b.classList.add('reveal'); });
 
-  var pending = blocks.length;
+  /* Blocks are removed from this list as they are shown. A list rather than a
+     counter: settle() strips the marker classes once the entrance has played,
+     so any "have I already shown this?" test based on those classes would go
+     on matching the same block again. */
+  var pending = blocks.slice();
 
   function settle(el) {
     setTimeout(function () {
@@ -60,19 +64,17 @@
   function update() {
     var vh = window.innerHeight;
 
-    if (pending) {
-      for (var i = 0; i < blocks.length; i++) {
-        var b = blocks[i];
-        if (b.classList.contains('is-in')) continue;
-        var r = b.getBoundingClientRect();
-        if (r.top < vh * 0.92 && r.bottom > 0) {
-          b.classList.add('is-in');
-          pending--;
-          // Once the entrance has had time to play, drop the classes so the
-          // element's visibility no longer depends on a transition that a
-          // non-compositing tab may have left half-finished.
-          settle(b);
-        }
+    for (var i = pending.length - 1; i >= 0; i--) {
+      var b = pending[i];
+      // No lower bound: after a reload restores the scroll position, blocks
+      // above the viewport must show immediately, not wait for a scroll up.
+      if (b.getBoundingClientRect().top < vh * 0.92) {
+        b.classList.add('is-in');
+        pending.splice(i, 1);
+        // Once the entrance has had time to play, drop the classes so the
+        // element's visibility no longer depends on a transition that a
+        // non-compositing tab may have left half-finished.
+        settle(b);
       }
     }
 
@@ -111,6 +113,9 @@
   window.addEventListener('scroll', onScroll, { passive: true });
   window.addEventListener('resize', onScroll);
   window.addEventListener('load', onScroll);
+  // Covers a restored scroll position on reload, and bfcache back-navigation
+  // where neither frames nor fresh timers are guaranteed to run.
+  window.addEventListener('pageshow', onScroll);
 
   // Above-the-fold blocks animate in on the next frame. The timer is a
   // failsafe for tabs that never composite (a background tab gets no
