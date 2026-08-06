@@ -608,18 +608,9 @@ a { color: inherit; }
   overflow-wrap: break-word;
 }
 
-/* ---------------------------------------------------------
-   Reveal
-   --------------------------------------------------------- */
-.reveal { opacity: 0; transform: translateY(14px); }
-.reveal.is-in {
-  opacity: 1;
-  transform: none;
-  transition: opacity .6s ease, transform .6s cubic-bezier(.22,.61,.36,1);
-}
-@media (prefers-reduced-motion: reduce) {
-  .reveal, .reveal.is-in { opacity: 1; transform: none; transition: none; }
-}
+/* No scroll-triggered reveal: nothing on this page hides content behind a
+   script. Content is visible as soon as it is parsed, whatever the scroll
+   position, the JS state, or the tab's rendering state. */
 
 /* ---------------------------------------------------------
    Print
@@ -629,6 +620,5 @@ a { color: inherit; }
   .rail, .hero__marks { display: none; }
   .sheet { max-width: none; padding: 0; }
   .sec { padding-top: 28px; break-inside: avoid; }
-  .reveal { opacity: 1; transform: none; }
   a { text-decoration: none; }
 }

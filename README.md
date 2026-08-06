@@ -19,7 +19,7 @@ Static HTML, CSS, and vanilla JS — no build step, no dependencies. Served dire
 ```
 index.html          all content
 assets/style.css    theme, layout, print styles
-assets/main.js      scroll-spy, reveal-on-scroll, theme toggle
+assets/main.js      scroll-spy and theme toggle (never gates content visibility)
 assets/favicon.svg
 assets/img/         DBF shop plates, cropped 2:3 and served at native width
 ```
@@ -40,4 +40,8 @@ Then open <http://localhost:8000>.
 
 Content lives entirely in `index.html`, grouped by sheet number (`00`–`06`). To add a section,
 copy a `<section class="sec">` block and add a matching entry to the `.rail__list` in the header —
-the scroll-spy and reveal animations pick it up automatically.
+the scroll-spy picks it up automatically.
+
+Nothing on the page hides content behind script. There is no reveal-on-scroll and no
+script-managed opacity, so a JS failure, a paused animation frame, or a restored scroll
+position can never leave a section blank.
