@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Monish Krishnakumar — Aerospace Engineering</title>
+<meta name="description" content="Monish Krishnakumar — B.S. Aerospace Engineering at the University of Washington. Manufacturing engineer on UW Design Build Fly; quantitative research in Python.">
+<meta name="author" content="Monish Krishnakumar">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Monish Krishnakumar — Aerospace Engineering">
+<meta property="og:description" content="Composite structures and flight hardware for competition aircraft. Reproducible quantitative research in Python.">
+<meta property="og:url" content="https://monishkk.github.io/">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<a class="skip" href="#overview">Skip to content</a>
+
+<!-- ============ SHEET INDEX (side rail) ============ -->
+<nav class="rail" aria-label="Sheet index">
+  <p class="rail__title">Sheet Index</p>
+  <ol class="rail__list">
+    <li><a href="#overview"><span class="rail__no">00</span> Overview</a></li>
+    <li><a href="#education"><span class="rail__no">01</span> Education</a></li>
+    <li><a href="#experience"><span class="rail__no">02</span> Experience</a></li>
+    <li><a href="#research"><span class="rail__no">03</span> Research</a></li>
+    <li><a href="#projects"><span class="rail__no">04</span> Projects</a></li>
+    <li><a href="#skills"><span class="rail__no">05</span> Skills</a></li>
+    <li><a href="#contact"><span class="rail__no">06</span> Contact</a></li>
+  </ol>
+  <button class="rail__theme" id="themeToggle" type="button" aria-pressed="false">
+    <span class="rail__swatch" aria-hidden="true"></span>
+    <span class="rail__themetext">Invert</span>
+  </button>
+</nav>
+
+<div class="sheet">
+
+  <!-- ============ HEADER ============ -->
+  <header class="hero" id="top">
+    <div class="hero__marks" aria-hidden="true">
+      <span class="mark mark--tl"></span><span class="mark mark--tr"></span>
+      <span class="mark mark--bl"></span><span class="mark mark--br"></span>
+    </div>
+
+    <div class="hero__head">
+      <p class="stamp">Drawing No. MK-2026 &middot; Rev. A</p>
+      <h1 class="hero__name">Monish<br>Krishnakumar</h1>
+      <p class="hero__role">Aerospace Engineering &middot; University of Washington&nbsp;&rsquo;28</p>
+      <p class="hero__blurb">
+        I build things that have to survive contact with reality &mdash; composite structures and
+        flight-ready hardware for competition aircraft, and research code that is honest about what
+        it does and doesn&rsquo;t prove.
+      </p>
+      <ul class="hero__links">
+        <li><a href="mailto:monishkrishnakumar@gmail.com">Email</a></li>
+        <li><a href="https://github.com/monishkk" rel="me noopener">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/monish-krishnakumar/" rel="me noopener">LinkedIn</a></li>
+      </ul>
+      <p class="hero__loc">Seattle, Washington</p>
+    </div>
+
+    <figure class="hero__fig">
+      <svg class="drawing" viewBox="0 0 800 400" role="img" aria-labelledby="figtitle">
+        <title id="figtitle">Technical plan view of an aircraft in an H-tail configuration with span and chord dimensions</title>
+        <defs>
+          <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M 0 0 L 10 5 L 0 10 z" class="d-fill"/>
+          </marker>
+        </defs>
+
+        <!-- centreline -->
+        <path class="d-center" d="M 400 26 L 400 372"/>
+
+        <!-- wings -->
+        <path class="d-line" d="M 387 150 L 130 158 L 130 190 L 387 196 Z"/>
+        <path class="d-line" d="M 413 150 L 670 158 L 670 190 L 413 196 Z"/>
+        <!-- spar -->
+        <path class="d-hidden" d="M 130 166 L 387 161.5 M 413 161.5 L 670 166"/>
+        <!-- aileron hinge lines -->
+        <path class="d-thin" d="M 130 182 L 250 184.8 M 250 184.8 L 250 192.8"/>
+        <path class="d-thin" d="M 670 182 L 550 184.8 M 550 184.8 L 550 192.8"/>
+
+        <!-- horizontal stabiliser -->
+        <path class="d-line" d="M 306 306 L 494 306 L 494 340 L 306 340 Z"/>
+        <path class="d-hidden" d="M 306 330 L 494 330"/>
+        <!-- H-tail fins -->
+        <path class="d-line" d="M 298 296 L 314 296 L 314 350 L 298 350 Z"/>
+        <path class="d-line" d="M 486 296 L 502 296 L 502 350 L 486 350 Z"/>
+
+        <!-- fuselage -->
+        <path class="d-line" d="M 400 44 C 392 62 387 86 387 108 L 387 330 L 413 330 L 413 108 C 413 86 408 62 400 44 Z"/>
+
+        <!-- span dimension -->
+        <path class="d-thin" d="M 130 200 L 130 262 M 670 200 L 670 262"/>
+        <path class="d-thin" marker-start="url(#ar)" marker-end="url(#ar)" d="M 130 252 L 670 252"/>
+        <rect class="d-gap" x="357" y="240" width="86" height="22"/>
+        <text class="d-text" x="400" y="257" text-anchor="middle">SPAN b</text>
+
+        <!-- tip chord dimension -->
+        <path class="d-thin" d="M 674 158 L 726 158 M 674 190 L 726 190"/>
+        <path class="d-thin" marker-start="url(#ar)" marker-end="url(#ar)" d="M 714 158 L 714 190"/>
+        <text class="d-text" x="734" y="180">c</text>
+
+        <!-- leader note -->
+        <text class="d-text" x="34" y="353">H&#8209;TAIL CONFIG.</text>
+        <path class="d-thin" marker-end="url(#ar)" d="M 200 348 L 232 348 L 292 324"/>
+      </svg>
+      <figcaption class="figcap">Fig. 01 &mdash; Plan view &middot; H-tail configuration &middot; Not to scale</figcaption>
+    </figure>
+  </header>
+
+  <!-- ============ 00 OVERVIEW ============ -->
+  <section id="overview" class="sec">
+    <h2 class="sec__h"><span class="sec__no">00</span> Overview</h2>
+    <div class="stats">
+      <div class="stat"><span class="stat__v">2nd</span><span class="stat__k">Global finish, AIAA DBF</span></div>
+      <div class="stat"><span class="stat__v">3</span><span class="stat__k">Competition aircraft built</span></div>
+      <div class="stat"><span class="stat__v">197</span><span class="stat__k">Tests in CI, research platform</span></div>
+      <div class="stat"><span class="stat__v">1,800 ft</span><span class="stat__k">Peak verified rocket altitude</span></div>
+    </div>
+  </section>
+
+  <!-- ============ 01 EDUCATION ============ -->
+  <section id="education" class="sec">
+    <h2 class="sec__h"><span class="sec__no">01</span> Education</h2>
+    <article class="entry">
+      <div class="entry__meta">
+        <p class="entry__date">Expected June 2028</p>
+        <p class="entry__place">Seattle, WA</p>
+      </div>
+      <div class="entry__body">
+        <h3 class="entry__title">University of Washington</h3>
+        <p class="entry__sub">B.S. Aerospace Engineering &middot; Minor in Business Administration</p>
+        <p class="label">Relevant coursework</p>
+        <ul class="tags">
+          <li>Engineering Statics &amp; Dynamics</li>
+          <li>Multivariable Calculus</li>
+          <li>Differential Equations</li>
+          <li>Linear Algebra</li>
+          <li>Elements of Statistical Methods</li>
+        </ul>
+      </div>
+    </article>
+  </section>
+
+  <!-- ============ 02 EXPERIENCE ============ -->
+  <section id="experience" class="sec">
+    <h2 class="sec__h"><span class="sec__no">02</span> Engineering Experience</h2>
+    <article class="entry">
+      <div class="entry__meta">
+        <p class="entry__date">Sep 2025 &ndash; Present</p>
+        <p class="entry__place">Seattle, WA</p>
+      </div>
+      <div class="entry__body">
+        <h3 class="entry__title">Manufacturing Engineer</h3>
+        <p class="entry__sub">Design Build Fly &middot; University of Washington</p>
+        <ol class="balloons">
+          <li>
+            Manufactured structural and aerodynamic components for <strong>three competition
+            aircraft</strong> on a seven-month design&ndash;build&ndash;test cycle, including the
+            UW-26 MAKO, which placed <strong>2nd globally</strong> at the AIAA Design/Build/Fly
+            competition against 100+ university teams.
+          </li>
+          <li>
+            Led <strong>H-tail configuration research</strong> in OpenVSP and SolidWorks, evaluating
+            aerodynamic performance against weight penalties to inform the empennage design decision.
+          </li>
+          <li>
+            Performed wet composite layups in fiberglass and carbon fiber over foam and 3D-printed
+            tooling using vacuum-bag, platen-press, and autoclave cures; designed and fabricated a
+            composite wing layup mold to improve part-to-part consistency.
+          </li>
+          <li>
+            Developed a <strong>standardized CNC hot-wire cutting workflow</strong> that reduced
+            manufacturing time and improved dimensional consistency and operator usability, producing
+            20+ foam parts across wings, control surfaces, and three tail assemblies; designed
+            <strong>5+ jigs and fixtures</strong> improving assembly accuracy, and translated CAD
+            models into flight-ready hardware via laser cutting, additive manufacturing, and
+            machine-shop fabrication, resolving fit and tolerance issues found during assembly.
+          </li>
+        </ol>
+      </div>
+    </article>
+  </section>
+
+  <!-- ============ 03 RESEARCH ============ -->
+  <section id="research" class="sec">
+    <h2 class="sec__h"><span class="sec__no">03</span> Quantitative Research</h2>
+    <article class="entry">
+      <div class="entry__meta">
+        <p class="entry__date">Aug 2026 &ndash; Present</p>
+        <p class="entry__place">Python &middot; pandas &middot; NumPy &middot; SciPy &middot; pytest &middot; GitHub Actions</p>
+      </div>
+      <div class="entry__body">
+        <h3 class="entry__title">Cross-Sectional ETF Momentum</h3>
+        <p class="entry__sub">Reproducible research platform &middot;
+          <a class="ext" href="https://github.com/monishkk/quant-research-platform" rel="noopener">github.com/monishkk/quant-research-platform</a>
+        </p>
+
+        <ol class="balloons">
+          <li>
+            Built a config-driven Python research platform spanning an automated data pipeline
+            (ingestion, validation, caching, provenance) through signal generation, portfolio
+            simulation, performance attribution, and reporting across 9 US ETFs over 17.9 years
+            (4,502 trading days); <strong>one command reproduces every figure, table, and a
+            10-section research report.</strong>
+          </li>
+          <li>
+            Engineered against standard backtest failure modes &mdash; T+1 execution lag,
+            self-financing accounting with weight drift, two-way turnover costs, parameters fixed
+            before results were inspected &mdash; validated by <strong>197 unit and regression
+            tests</strong> in CI across two Python versions, including look-ahead checks that mutate
+            future prices and assert historical signals are unchanged.
+          </li>
+          <li>
+            Determined the strategy&rsquo;s <strong>+0.111 Sharpe advantage over SPY was not
+            statistically significant</strong> (stationary block bootstrap p&nbsp;=&nbsp;0.53;
+            Deflated Sharpe 0.70 vs. a 192-trial noise hurdle of 0.40) and traced the entire edge to
+            one year via leave-one-year-out analysis &mdash; excluding 2008 the advantage reverses to
+            &minus;0.03.
+          </li>
+          <li>
+            Isolated the surviving effect with a <strong>Monte Carlo null of 300 randomized 3-of-9
+            rotations</strong>: the ranking outperformed all 300 (p&nbsp;&lt;&nbsp;0.01) and held when
+            random portfolios were given zero transaction costs, separating selection skill from
+            turnover; reported Sharpe, Sortino, Calmar, maximum drawdown, VaR/CVaR, and
+            HAC-corrected alpha regression.
+          </li>
+        </ol>
+
+        <p class="label">Results table</p>
+        <table class="spec">
+          <caption class="vh">Key results from the ETF momentum study</caption>
+          <tbody>
+            <tr><th scope="row">Universe</th><td>9 US ETFs</td></tr>
+            <tr><th scope="row">Sample</th><td>17.9 years &middot; 4,502 trading days</td></tr>
+            <tr><th scope="row">Sharpe &Delta; vs. SPY</th><td>+0.111</td></tr>
+            <tr><th scope="row">Block bootstrap</th><td>p = 0.53</td></tr>
+            <tr><th scope="row">Deflated Sharpe</th><td>0.70 vs. 0.40 hurdle (192 trials)</td></tr>
+            <tr><th scope="row">Excluding 2008</th><td>&minus;0.03 &mdash; advantage reverses</td></tr>
+            <tr><th scope="row">Monte Carlo null</th><td>Beat 300 / 300 random rotations, p &lt; 0.01</td></tr>
+            <tr><th scope="row">Verification</th><td>197 tests, CI on two Python versions</td></tr>
+          </tbody>
+        </table>
+
+        <aside class="note">
+          <p class="note__k">Note &mdash; on the headline result</p>
+          <p>
+            The negative finding is the finding. The platform was built to be capable of failing to
+            confirm its own hypothesis, and it did: once multiple-testing and turnover costs are
+            accounted for, the momentum edge does not survive. Reporting that honestly is the point
+            of the work.
+          </p>
+        </aside>
+      </div>
+    </article>
+  </section>
+
+  <!-- ============ 04 PROJECTS ============ -->
+  <section id="projects" class="sec">
+    <h2 class="sec__h"><span class="sec__no">04</span> Engineering Projects</h2>
+    <article class="entry">
+      <div class="entry__meta">
+        <p class="entry__date">May 2022 &ndash; Present</p>
+      </div>
+      <div class="entry__body">
+        <h3 class="entry__title">Model Rocket Design and Testing</h3>
+        <ol class="balloons">
+          <li>
+            Designed, fabricated, and flight-tested custom model rockets through iterative
+            build&ndash;test&ndash;redesign cycles, achieving altitudes exceeding <strong>1,800
+            ft</strong> verified with onboard altimeter data and using post-test inspections to drive
+            subsequent design changes.
+          </li>
+        </ol>
+      </div>
+    </article>
+  </section>
+
+  <!-- ============ 05 SKILLS ============ -->
+  <section id="skills" class="sec">
+    <h2 class="sec__h"><span class="sec__no">05</span> Technical Skills</h2>
+    <div class="skills">
+      <div class="skillgrp">
+        <p class="skillgrp__k">Programming &amp; Data</p>
+        <ul class="tags">
+          <li>Python</li><li>pandas</li><li>NumPy</li><li>SciPy</li><li>Matplotlib</li>
+          <li>Java</li><li>TypeScript</li><li>JavaScript</li><li>pytest</li><li>Unit testing</li>
+          <li>Git</li><li>GitHub Actions (CI/CD)</li><li>Jupyter</li><li>Data pipelines</li>
+          <li>Data visualization</li>
+        </ul>
+      </div>
+      <div class="skillgrp">
+        <p class="skillgrp__k">Quantitative Methods</p>
+        <ul class="tags">
+          <li>Statistical inference</li><li>Hypothesis testing</li><li>Time-series analysis</li>
+          <li>Backtesting</li><li>Monte Carlo simulation</li><li>Bootstrap resampling</li>
+          <li>Regression analysis</li><li>HAC (Newey&ndash;West) errors</li>
+          <li>Multiple-testing correction</li><li>Performance attribution</li>
+        </ul>
+      </div>
+      <div class="skillgrp">
+        <p class="skillgrp__k">CAD &amp; Design</p>
+        <ul class="tags">
+          <li>SolidWorks</li><li>Fusion 360</li><li>AutoCAD</li><li>OpenVSP</li>
+          <li>3D modeling</li><li>Mechanical assemblies</li><li>Tolerance analysis</li>
+          <li>Design for manufacturability</li>
+        </ul>
+      </div>
+      <div class="skillgrp">
+        <p class="skillgrp__k">Composites &amp; Manufacturing</p>
+        <ul class="tags">
+          <li>Carbon fiber</li><li>Fiberglass</li><li>Wet layup</li><li>Vacuum bagging</li>
+          <li>Autoclave</li><li>Platen press</li><li>CNC hot-wire cutting</li>
+          <li>Additive manufacturing</li><li>MIG welding</li><li>Laser cutting</li>
+          <li>Jig &amp; fixture design</li><li>Rapid prototyping</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 06 CONTACT ============ -->
+  <section id="contact" class="sec">
+    <h2 class="sec__h"><span class="sec__no">06</span> Contact</h2>
+    <p class="contact__lead">Open to internships and project work in aerospace manufacturing,
+      structures, and quantitative research.</p>
+    <ul class="contact">
+      <li><span class="contact__k">Email</span><a href="mailto:monishkrishnakumar@gmail.com">monishkrishnakumar@gmail.com</a></li>
+      <li><span class="contact__k">GitHub</span><a href="https://github.com/monishkk" rel="noopener">github.com/monishkk</a></li>
+      <li><span class="contact__k">LinkedIn</span><a href="https://www.linkedin.com/in/monish-krishnakumar/" rel="noopener">in/monish-krishnakumar</a></li>
+      <li><span class="contact__k">Location</span><span>Seattle, Washington</span></li>
+    </ul>
+  </section>
+
+  <!-- ============ TITLE BLOCK ============ -->
+  <footer class="titleblock">
+    <div class="tb tb--wide">
+      <p class="tb__k">Drawing title</p>
+      <p class="tb__v">Portfolio &mdash; Monish Krishnakumar</p>
+    </div>
+    <div class="tb">
+      <p class="tb__k">Drawn by</p>
+      <p class="tb__v">M. Krishnakumar</p>
+    </div>
+    <div class="tb">
+      <p class="tb__k">Date</p>
+      <p class="tb__v"><time datetime="2026-08-05">2026-08-05</time></p>
+    </div>
+    <div class="tb">
+      <p class="tb__k">Scale</p>
+      <p class="tb__v">NTS</p>
+    </div>
+    <div class="tb">
+      <p class="tb__k">Rev.</p>
+      <p class="tb__v">A</p>
+    </div>
+    <div class="tb">
+      <p class="tb__k">Sheet</p>
+      <p class="tb__v">1 of 1</p>
+    </div>
+  </footer>
+
+</div>
+
+<script src="assets/main.js"></script>
+</body>
+</html>
