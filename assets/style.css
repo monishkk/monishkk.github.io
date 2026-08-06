@@ -472,7 +472,6 @@ a { color: inherit; }
   text-transform: uppercase;
   color: var(--ink-3);
 }
-.plate__no { color: var(--accent); margin-right: 6px; }
 
 /* --- spec table --- */
 .spec {
