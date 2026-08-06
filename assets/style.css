@@ -349,6 +349,13 @@ a { color: inherit; }
   .entry { grid-template-columns: 190px minmax(0, 1fr); }
 }
 
+/* Sections holding more than one entry get a drafting rule between them. */
+.entry + .entry {
+  margin-top: clamp(38px, 5vw, 52px);
+  padding-top: clamp(34px, 4.5vw, 46px);
+  border-top: 1px solid var(--line-soft);
+}
+
 .entry__meta, .entry__body { min-width: 0; }
 .entry__meta { padding-top: 6px; }
 .entry__date, .entry__place {
